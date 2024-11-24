@@ -10,4 +10,3 @@ springdoc:
 server:
   servlet:
     context-path: /api/v1/
-
