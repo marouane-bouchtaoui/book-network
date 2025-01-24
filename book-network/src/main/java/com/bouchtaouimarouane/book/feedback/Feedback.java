@@ -20,7 +20,6 @@ public class Feedback extends BaseEntity {
     @Column
     private Double note; //1-5 stars
     private String comment;
-
     @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;

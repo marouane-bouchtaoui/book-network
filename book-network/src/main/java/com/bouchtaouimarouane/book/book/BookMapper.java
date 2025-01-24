@@ -1,5 +1,6 @@
 package com.bouchtaouimarouane.book.book;
 
+import com.bouchtaouimarouane.book.file.FileUtils;
 import com.bouchtaouimarouane.book.history.BookTransactionHistory;
 import org.springframework.stereotype.Service;
 
@@ -28,8 +29,7 @@ public class BookMapper {
                 .archived(book.isArchived())
                 .shareable(book.isShareable())
                 .owner(book.getOwner().fullName())
-                //
-                // .cover()
+                .cover(FileUtils.readFileFromLocation(book.getBookCover()))
                 .build();
     }
 
